@@ -1,0 +1,47 @@
+Source: node-mississippi
+Section: javascript
+Priority: optional
+Maintainer: Debian Javascript Maintainers <pkg-javascript-devel@lists.alioth.debian.org>
+Uploaders: Pirate Praveen <praveen@debian.org>
+Build-Depends: debhelper-compat (= 13)
+ , dh-sequence-nodejs
+ , node-concat-stream <!nocheck>
+ , node-duplexify <!nocheck>
+ , node-end-of-stream <!nocheck>
+ , node-flush-write-stream <!nocheck>
+ , node-from2 <!nocheck>
+ , node-parallel-transform <!nocheck>
+ , node-pump <!nocheck>
+ , node-pumpify <!nocheck>
+ , node-stream-each <!nocheck>
+ , node-through2 <!nocheck>
+Standards-Version: 4.6.0
+Vcs-Browser: https://salsa.debian.org/js-team/node-mississippi
+Vcs-Git: https://salsa.debian.org/js-team/node-mississippi.git
+Homepage: https://github.com/maxogden/mississippi
+Testsuite: autopkgtest-pkg-nodejs
+Rules-Requires-Root: no
+
+Package: node-mississippi
+Architecture: all
+Depends: ${misc:Depends}
+ , node-concat-stream
+ , node-duplexify
+ , node-end-of-stream
+ , node-flush-write-stream
+ , node-from2
+ , node-parallel-transform
+ , node-pump
+ , node-pumpify
+ , node-stream-each
+ , node-through2
+ , nodejs
+Description: collection of useful streams
+ This modules is a collection of useful stream utility modules. Learn how the
+ modules work using this and then pick the ones you want and use them
+ individually.
+ .
+ The goal of the modules included in mississippi is to make working with
+ streams easy without sacrificing speed, error handling or composability.
+ .
+ Node.js is an event-based server-side JavaScript engine.
